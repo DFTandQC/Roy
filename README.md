@@ -1,62 +1,70 @@
-# AI with atmosphere 
+# AtmoAI: Atmospheric Anomaly Detection and Forecasting
 
 Final project for the Building AI course
 
 ## Summary
 
-**AtmoAI** is a machine learning project that aims to detect anomalies in atmospheric data and improve the short-term prediction of key variables such as air pollutants, temperature, and humidity. By combining traditional environmental monitoring with AI techniques, the project enhances our ability to understand, forecast, and respond to rapid changes in the atmosphere, such as pollution spikes or sudden weather shifts. This system has potential applications in air quality alerts, climate research, and urban environmental planning.
+**AtmoAI** is a machine learning system that detects anomalies in atmospheric data and forecasts air quality and weather-related variables. It supports environmental monitoring by identifying pollution spikes, unusual aerosol activity, or rapid meteorological changes.
 
-## 💡 Project Idea
+## Background
 
-Atmospheric scientists use both measurement data and numerical models to monitor the state of the atmosphere. However, unexpected events like wildfire smoke, pollution from shipping, or sudden aerosol changes can be missed or misrepresented by conventional models.
+Modern atmospheric models struggle with predicting rapid, localized events like smoke plumes or urban air quality spikes. With climate and health concerns on the rise, we need smarter tools to support real-time air monitoring.
 
-AtmoAI addresses this problem by:
-- Detecting abnormal atmospheric behavior using machine learning
-- Improving forecasts for pollutants like PM2.5 and NO₂
-- Reducing reliance on heavy numerical modeling where possible
+This project aims to:
+* Detect sudden changes in atmospheric variables (e.g., pollution, temperature, aerosol behavior)
+* Improve short-term predictions (1–48 hours ahead)
+* Provide support tools for public health, climate response, and research
 
-## 🎯 Problem Statement
+As an atmospheric science student, I’m interested in combining AI with physics-based understanding to make real-time atmospheric insights more accessible.
 
-Can we use machine learning to identify and forecast atmospheric anomalies in a fast, flexible, and accurate way, using measurement and model data?
+## How is it used?
 
-## 🧠 AI Approach
+AtmoAI will be used by environmental researchers, city planners, public health agencies, and meteorological institutions. The system is needed in real-time or near-real-time environments, especially during:
+* Urban air quality monitoring
+* Forest fires or industrial accidents
+* Arctic or remote atmospheric research
 
-### Input Data
-- Ground-based: PM2.5, O₃, NO₂, SO₂, humidity, temperature
-- Satellite: Aerosol Optical Depth (AOD), cloud cover
-- Meteorology: wind speed, pressure, precipitation
-- Model output: from SILAM, ECMWF, or Copernicus atmospheric datasets
+The system processes live data, detects anomalies, and outputs forecasts and visualizations through a user-friendly dashboard or API.
 
-### ML Techniques
-- **Unsupervised learning**: anomaly detection via clustering or autoencoders
-- **Time series prediction**: LSTMs, GRUs, Prophet
-- **Supervised regression**: for pollutant level forecasting
-- **Hybrid models**: correcting physics-based outputs with ML predictions
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Helsinki_air_quality_map.png" width="400">
 
-## 🧪 Key Features
-- Identify pollution or meteorological anomalies
-- Predict pollutant concentrations 1–48 hours in advance
-- Interactive visualization of air quality indicators
-- Trigger warnings for unhealthy air or rapid changes
+## Data sources and AI methods
 
-## 🛠 Tech Stack
-- Python: NumPy, Pandas, Scikit-learn, TensorFlow/PyTorch
-- Atmospheric data tools: NetCDF4, xarray, HDF5
-- Visualization: Matplotlib, Plotly, Cartopy
-- Interface: Streamlit or Dash
+AtmoAI uses openly available datasets:
+- OpenAQ (air quality monitoring stations)
+- Copernicus CAMS and ECMWF (weather and chemical reanalysis)
+- NASA MODIS/Sentinel satellite data (AOD, cloud cover)
 
-## ✅ Evaluation Metrics
-- RMSE / MAE for forecast accuracy
-- Precision & recall for anomaly detection
-- Spatial accuracy of predicted pollution fields
+AI methods include:
+- LSTM and GRU neural networks for time-series forecasting
+- Autoencoders for anomaly detection
+- Random Forest for pollutant concentration prediction
 
-## 🚀 Future Extensions
-- Apply to Arctic aerosol observations or Finnish urban air quality
-- Integrate with low-cost sensor networks (e.g., PurpleAir)
-- Use CNNs for satellite image-based prediction
-- Collaborate with atmospheric models for hybrid workflows
+[Copernicus Atmospheric Monitoring Service](https://atmosphere.copernicus.eu/)
 
-## 👨‍🔬 Why This Project?
+## Challenges
 
-As a Master's student in atmospheric science, I'm passionate about integrating AI tools into environmental research. This project blends real-world relevance (air quality, health, climate) with technical innovation and serves as a stepping stone toward smarter environmental monitoring systems.
+* Limited labeled data for rare anomaly events
+* Interpreting neural network outputs for decision-making
+* Data sparsity in remote areas
+* Balancing model complexity and real-time performance
 
+## What next?
+
+The next steps include:
+* Creating a real-time data ingestion pipeline
+* Deploying a working dashboard for Helsinki’s air quality
+* Extending to other cities or Arctic research stations
+* Collaborating with atmospheric modelers to build hybrid physics+AI systems
+
+Support needed:
+- AI developers with experience in geospatial/time-series data
+- Atmospheric scientists for validation and calibration
+- Public organizations interested in testing the system
+
+## Acknowledgments
+
+* Inspired by tools like SILAM, CAMS, and open-source pollution prediction projects
+* NASA, ECMWF, Copernicus, and OpenAQ for public data
+* Reaktor x University of Helsinki for the Building AI course
+* [Air quality map image source](https://commons.wikimedia.org/wiki/File:Helsinki_air_quality_map.png) / [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
