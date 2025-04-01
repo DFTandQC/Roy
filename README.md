@@ -1,4 +1,4 @@
-# Project Title
+# AI with atmosphere 
 
 Final project for the Building AI course
 
