@@ -1,65 +1,60 @@
-# Roy
-Buliding AI-final assignment
 # 🌍 AtmoAI: An AI-Powered System for Atmospheric Anomaly Detection and Forecasting
+
+## Summary
+
+**AtmoAI** is a machine learning project that aims to detect anomalies in atmospheric data and improve the short-term prediction of key variables such as air pollutants, temperature, and humidity. By combining traditional environmental monitoring with AI techniques, the project enhances our ability to understand, forecast, and respond to rapid changes in the atmosphere, such as pollution spikes or sudden weather shifts. This system has potential applications in air quality alerts, climate research, and urban environmental planning.
 
 ## 💡 Project Idea
 
-**AtmoAI** is an artificial intelligence project designed to detect anomalies in atmospheric data and improve short-term predictions of atmospheric conditions. The idea is to use machine learning to support environmental monitoring by identifying unexpected pollution events, unusual aerosol behavior, or rapid shifts in meteorological variables.
+Atmospheric scientists use both measurement data and numerical models to monitor the state of the atmosphere. However, unexpected events like wildfire smoke, pollution from shipping, or sudden aerosol changes can be missed or misrepresented by conventional models.
+
+AtmoAI addresses this problem by:
+- Detecting abnormal atmospheric behavior using machine learning
+- Improving forecasts for pollutants like PM2.5 and NO₂
+- Reducing reliance on heavy numerical modeling where possible
 
 ## 🎯 Problem Statement
 
-Atmospheric scientists rely on numerical models and observational data to track the state of the atmosphere. However, these models often:
-- Struggle with localized anomalies (e.g., pollution spikes or wildfire plumes)
-- Require significant computational resources
-- May miss non-linear or hidden patterns in the data
-
-**AtmoAI** aims to:
-- Detect atmospheric anomalies in near-real-time
-- Improve short-term prediction accuracy using ML
-- Support alert systems for air quality or extreme weather events
+Can we use machine learning to identify and forecast atmospheric anomalies in a fast, flexible, and accurate way, using measurement and model data?
 
 ## 🧠 AI Approach
 
 ### Input Data
-- Ground-based measurements (e.g., PM2.5, NO₂, O₃, SO₂, temperature, humidity)
-- Satellite-based aerosol optical depth (AOD), cloud properties, etc.
-- Meteorological data (wind speed, pressure, temperature)
-- Model output from chemical transport or weather models (e.g., ECMWF, SILAM)
+- Ground-based: PM2.5, O₃, NO₂, SO₂, humidity, temperature
+- Satellite: Aerosol Optical Depth (AOD), cloud cover
+- Meteorology: wind speed, pressure, precipitation
+- Model output: from SILAM, ECMWF, or Copernicus atmospheric datasets
 
-### Algorithms and Techniques
-- **Unsupervised learning** (e.g. autoencoders, clustering) for anomaly detection
-- **Time series forecasting** using:
-  - LSTM (Long Short-Term Memory networks)
-  - GRU (Gated Recurrent Units)
-  - Prophet or ARIMA (for baselines)
-- **Supervised regression** to predict pollutant concentrations or visibility
-- **Hybrid approach**: combining physics-based models with machine learning residuals
+### ML Techniques
+- **Unsupervised learning**: anomaly detection via clustering or autoencoders
+- **Time series prediction**: LSTMs, GRUs, Prophet
+- **Supervised regression**: for pollutant level forecasting
+- **Hybrid models**: correcting physics-based outputs with ML predictions
 
 ## 🧪 Key Features
-- Detect abnormal changes in air quality or meteorological parameters
-- Forecast pollutant levels 1–48 hours ahead
-- Visualize temporal and spatial patterns
-- Trigger alerts when thresholds are exceeded (for health or climate relevance)
+- Identify pollution or meteorological anomalies
+- Predict pollutant concentrations 1–48 hours in advance
+- Interactive visualization of air quality indicators
+- Trigger warnings for unhealthy air or rapid changes
 
 ## 🛠 Tech Stack
-- Python (NumPy, Pandas, Scikit-learn)
-- TensorFlow / PyTorch (for neural networks)
-- NetCDF4 / xarray (for atmospheric data formats)
-- Cartopy / Matplotlib / Plotly (for geospatial visualizations)
-- Streamlit or Dash (for building an interactive web app)
+- Python: NumPy, Pandas, Scikit-learn, TensorFlow/PyTorch
+- Atmospheric data tools: NetCDF4, xarray, HDF5
+- Visualization: Matplotlib, Plotly, Cartopy
+- Interface: Streamlit or Dash
 
 ## ✅ Evaluation Metrics
-- Root Mean Squared Error (RMSE) and MAE for forecasting
-- Precision and recall for anomaly detection
-- Spatial accuracy of pollutant plume reconstruction
+- RMSE / MAE for forecast accuracy
+- Precision & recall for anomaly detection
+- Spatial accuracy of predicted pollution fields
 
 ## 🚀 Future Extensions
-- Integrate with sensor networks (e.g., PurpleAir or EU AQ monitoring stations)
-- Incorporate satellite data with deep learning (CNNs on AOD maps)
-- Apply model to specific regions (e.g., Helsinki, Shanghai, Arctic)
-- Use transfer learning to generalize models across continents or seasons
+- Apply to Arctic aerosol observations or Finnish urban air quality
+- Integrate with low-cost sensor networks (e.g., PurpleAir)
+- Use CNNs for satellite image-based prediction
+- Collaborate with atmospheric models for hybrid workflows
 
 ## 👨‍🔬 Why This Project?
 
-As a student in atmospheric sciences, I am deeply interested in how AI can complement traditional models in understanding and predicting complex atmospheric processes. This project not only has scientific relevance but also potential real-world impact in public health, environmental policy, and climate research.
+As a Master's student in atmospheric science, I'm passionate about integrating AI tools into environmental research. This project blends real-world relevance (air quality, health, climate) with technical innovation and serves as a stepping stone toward smarter environmental monitoring systems.
 
