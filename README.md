@@ -1,4 +1,6 @@
-# 🌍 AtmoAI: An AI-Powered System for Atmospheric Anomaly Detection and Forecasting
+# Project Title
+
+Final project for the Building AI course
 
 ## Summary
 
